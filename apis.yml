@@ -1,23 +1,52 @@
 aid: beama123
+
 name: Beama123
-description: 'Beama123 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Beama123 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling. The entry currently contains minimal public information, indicating that the company is listed on secondary-market platforms such as EquityZen, but no dedicated corporate website or detailed public documentation is available. This placeholder description reflects the limited data gathered during the initial harvest and serves as a basis for further enrichment as more information becomes accessible.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beama123/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Technology
+- Finance
+- Marketplace
+- Startup
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://equityzen.com/company/beama123
+
+  - type: Hosts
+    url: hosts/beama123-hosts.yml
+  - type: Vendors
+    url: vendors/beama123-vendors.yml
+  - type: DomainSecurity
+    url: security/beama123-domain-security.yml
+  - type: Website
+    url: https://equityzen.com/company/beama123
+
+apis: []
+x-enrichment:
+  date: '2026-09-27'
+  status: minimal
+  artifacts_added: 2
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
